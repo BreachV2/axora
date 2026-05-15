@@ -7,7 +7,7 @@
   <title>Axora Netzwerk</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-primary:       #07090f;
@@ -61,7 +61,7 @@
     ::-webkit-scrollbar-thumb:hover{ background: var(--accent); }
 
     body {
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Inter', sans-serif;
       background: var(--bg-primary);
       color: var(--text-primary);
       line-height: 1.7;
@@ -82,7 +82,7 @@
     }
 
     h1, h2, h3, h4, h5 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       line-height: 1.08;
       letter-spacing: -0.025em;
     }
@@ -153,6 +153,9 @@
       border-bottom: 1px solid var(--border);
       transition: background var(--transition);
     }
+    nav .container {
+      width: 100%;
+    }
     nav.scrolled {
       background: rgba(7,9,15,0.94);
       border-bottom-color: rgba(255,255,255,0.09);
@@ -177,7 +180,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 800;
       font-size: 16px;
       color: #fff;
@@ -185,7 +188,7 @@
       flex-shrink: 0;
     }
     .nav-logo-text {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-weight: 700;
       font-size: 17px;
       color: var(--text-primary);
@@ -224,7 +227,7 @@
       gap: 9px;
       padding: 12px 28px;
       border-radius: var(--radius-full);
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
@@ -429,7 +432,7 @@
     }
     .stat-item:last-child { border-right: none; }
     .stat-num {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 40px;
       font-weight: 800;
       color: var(--text-primary);
@@ -461,6 +464,9 @@
     }
     @media (max-width: 960px) {
       .about-grid { grid-template-columns: 1fr; gap: 64px; }
+      .about-text { text-align: center; }
+      .about-text .subhead { margin: 0 auto 48px; }
+      .about-point { text-align: left; }
     }
     .about-text .label   { display: block; margin-bottom: 18px; }
     .about-text h2       { margin-bottom: 24px; }
@@ -484,7 +490,7 @@
     .point-text h4 {
       font-size: 15px;
       font-weight: 600;
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Inter', sans-serif;
       letter-spacing: 0;
       color: var(--text-primary);
       margin-bottom: 5px;
@@ -529,7 +535,7 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 26px;
     }
-    .dc-name  { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px; color: var(--text-primary); }
+    .dc-name  { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 17px; color: var(--text-primary); }
     .dc-sub   { font-size: 12.5px; color: var(--text-muted); margin-top: 2px; }
     .dc-stats {
       display: grid;
@@ -549,7 +555,7 @@
     }
     .dc-dot.green  { background: #23a55a; box-shadow: 0 0 8px rgba(35,165,90,0.55); }
     .dc-dot.blue   { background: var(--accent-bright); box-shadow: 0 0 8px var(--accent-glow-strong); }
-    .dc-stat-num   { font-family: 'Syne', sans-serif; font-size: 26px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.025em; }
+    .dc-stat-num   { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 26px; font-weight: 700; color: var(--text-primary); letter-spacing: -0.025em; }
     .dc-stat-lbl   { font-size: 11.5px; color: var(--text-muted); font-weight: 500; }
 
     .float-a {
@@ -625,7 +631,7 @@
       box-shadow: 0 0 28px var(--accent-glow-strong);
     }
     .feat-title {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 18px;
       font-weight: 700;
       color: var(--text-primary);
@@ -669,7 +675,7 @@
       border: 2px solid var(--border-accent);
       display: flex; align-items: center; justify-content: center;
       margin: 0 auto 20px;
-      font-family: 'Syne', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 28px;
       font-weight: 800;
       color: #fff;
@@ -694,7 +700,7 @@
     .role-mod     { background: rgba(59,130,246,0.1);   border: 1px solid rgba(59,130,246,0.25);  color: var(--accent-bright); }
     .role-support { background: rgba(16,185,129,0.1);   border: 1px solid rgba(16,185,129,0.25);  color: #34d399; }
 
-    .team-name { font-family: 'Syne', sans-serif; font-size: 17px; font-weight: 700; color: var(--text-primary); letter-spacing: -.01em; margin-bottom: 8px; }
+    .team-name { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 17px; font-weight: 700; color: var(--text-primary); letter-spacing: -.01em; margin-bottom: 8px; }
     .team-bio  { font-size: 13px; color: var(--text-secondary); line-height: 1.65; }
 
     .faq-list {
@@ -718,7 +724,7 @@
       background: none;
       border: none;
       color: var(--text-primary);
-      font-family: 'Manrope', sans-serif;
+      font-family: 'Inter', sans-serif;
       font-size: 15px;
       font-weight: 600;
       text-align: left;
@@ -809,7 +815,7 @@
       margin-top: 16px;
     }
     .footer-col h4 {
-      font-family: 'Syne', sans-serif;
+      font-family: 'Plus Jakarta Sans', sans-serif;
       font-size: 12px;
       font-weight: 700;
       color: var(--text-primary);
@@ -883,6 +889,11 @@
     .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
     .hamburger.open span:nth-child(2) { opacity: 0; }
     .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
   </style>
 </head>
 <body>
@@ -902,7 +913,7 @@
           <li><a href="#team">Team</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-        <div style="display:flex;align-items:center;">
+        <div class="nav-right">
           <a href="https://discord.gg/HQNdBeWcmP" target="_blank" rel="noopener" class="btn btn-primary">
             Beitreten
           </a>
