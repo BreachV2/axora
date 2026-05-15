@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Impressum – Axora Netzwerk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary:     #07090f;
+      --bg-secondary:   #0c0f1a;
+      --bg-tertiary:    #111627;
+      --border:         rgba(255,255,255,0.07);
+      --accent:         #3b82f6;
+      --accent-bright:  #60a5fa;
+      --accent-dim:     #1d4ed8;
+      --text-primary:   #f0f2f8;
+      --text-secondary: rgba(240,242,248,0.52);
+      --text-muted:     rgba(240,242,248,0.28);
+      --glass-border:   rgba(255,255,255,0.13);
+      --nav-height:     72px;
+      --ease: cubic-bezier(0.16,1,0.3,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+
+    ::-webkit-scrollbar            { width: 5px; }
+    ::-webkit-scrollbar-track      { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb      { background: var(--accent-dim); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover{ background: var(--accent); }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      background: rgba(7,9,15,0.70);
+      backdrop-filter: blur(44px) saturate(220%);
+      -webkit-backdrop-filter: blur(44px) saturate(220%);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-mark {
+      width: 36px; height: 36px;
+      background: rgba(59,130,246,0.50);
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800; font-size: 16px; color: #fff;
+    }
+    .nav-logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700; font-size: 16px; color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .nav-back {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s var(--ease);
+    }
+    .nav-back:hover { color: var(--accent-bright); }
+    .nav-back svg { width: 16px; height: 16px; }
+
+    /* CONTENT */
+    .legal-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: calc(var(--nav-height) + 80px) 40px 100px;
+    }
+
+    .legal-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-bright);
+      margin-bottom: 16px;
+    }
+
+    .legal-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 14px;
+    }
+
+    .legal-sub {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 56px;
+    }
+
+    .legal-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    .legal-section { margin-bottom: 40px; }
+
+    .legal-section h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .legal-section p,
+    .legal-section address {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-style: normal;
+    }
+
+    .legal-section a {
+      color: var(--accent-bright);
+      text-decoration: none;
+    }
+    .legal-section a:hover { text-decoration: underline; }
+
+    .legal-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 56px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent-bright);
+      text-decoration: none;
+      transition: gap 0.2s var(--ease);
+    }
+    .back-link:hover { gap: 12px; }
+    .back-link svg { width: 16px; height: 16px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--accent-bright); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 768px) {
+      .nav-inner    { padding: 0 20px; }
+      .legal-wrap   { padding: calc(var(--nav-height) + 48px) 20px 80px; }
+      .legal-card   { padding: 20px; }
+      footer        { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">A</div>
+        <span class="nav-logo-text">Axora Netzwerk</span>
+      </a>
+      <a href="index.html" class="nav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Zurück zur Startseite
+      </a>
+    </div>
+  </nav>
+
+  <main class="legal-wrap">
+    <p class="legal-label">Rechtliches</p>
+    <h1 class="legal-title">Impressum</h1>
+    <p class="legal-sub">Angaben gemäß § 5 TMG</p>
+
+    <div class="legal-card">
+      <div class="legal-section" style="margin-bottom:0;">
+        <h2>Verantwortlich für den Inhalt</h2>
+        <address>
+          Maurice Upmeier<br>
+          Voltmannstr. 237<br>
+          33613 Bielefeld<br>
+          Deutschland
+        </address>
+        <p style="margin-top:16px;">
+          <strong style="color:var(--text-primary);">E-Mail:</strong>
+          <a href="mailto:ayzetd@icloud.com">ayzetd@icloud.com</a>
+        </p>
+      </div>
+    </div>
+
+    <hr class="legal-divider">
+
+    <div class="legal-section">
+      <h2>Hosting</h2>
+      <p>
+        Diese Website wird über <strong style="color:var(--text-primary);">GitHub Pages</strong> (GitHub, Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) gehostet.
+        GitHub kann dabei technische Zugriffsdaten (z.&thinsp;B. IP-Adressen, Zeitstempel) in Server-Logs erfassen.
+        Weitere Informationen finden sich in der
+        <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">Datenschutzerklärung von GitHub</a>.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Haftungsausschluss</h2>
+      <p>
+        Die Inhalte dieser Seite wurden mit größtmöglicher Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte
+        wird jedoch keine Gewähr übernommen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten
+        nach den allgemeinen Gesetzen verantwortlich.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Haftung für Links</h2>
+      <p>
+        Diese Website enthält Links zu externen Websites Dritter (z.&thinsp;B. Discord), auf deren Inhalte kein Einfluss besteht.
+        Deshalb kann für diese fremden Inhalte keine Gewähr übernommen werden. Für die Inhalte der verlinkten Seiten ist stets
+        der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.
+      </p>
+    </div>
+
+    <div class="legal-section">
+      <h2>Urheberrecht</h2>
+      <p>
+        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf dieser Website unterliegen dem deutschen Urheberrecht.
+        Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts
+        bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+      </p>
+    </div>
+
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Zurück zur Startseite
+    </a>
+  </main>
+
+  <footer>
+    <p>© 2026 Axora Netzwerk &nbsp;·&nbsp; <a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Datenschutzerklärung – Axora Netzwerk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-primary:     #07090f;
+      --bg-secondary:   #0c0f1a;
+      --border:         rgba(255,255,255,0.07);
+      --accent:         #3b82f6;
+      --accent-bright:  #60a5fa;
+      --accent-dim:     #1d4ed8;
+      --text-primary:   #f0f2f8;
+      --text-secondary: rgba(240,242,248,0.52);
+      --text-muted:     rgba(240,242,248,0.28);
+      --glass-border:   rgba(255,255,255,0.13);
+      --nav-height:     72px;
+      --ease: cubic-bezier(0.16,1,0.3,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; }
+
+    ::-webkit-scrollbar            { width: 5px; }
+    ::-webkit-scrollbar-track      { background: var(--bg-primary); }
+    ::-webkit-scrollbar-thumb      { background: var(--accent-dim); border-radius: 99px; }
+    ::-webkit-scrollbar-thumb:hover{ background: var(--accent); }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      background: rgba(7,9,15,0.70);
+      backdrop-filter: blur(44px) saturate(220%);
+      -webkit-backdrop-filter: blur(44px) saturate(220%);
+      border-bottom: 1px solid var(--glass-border);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 40px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .nav-logo-mark {
+      width: 36px; height: 36px;
+      background: rgba(59,130,246,0.50);
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 800; font-size: 16px; color: #fff;
+    }
+    .nav-logo-text {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700; font-size: 16px; color: var(--text-primary);
+      letter-spacing: -0.02em;
+    }
+    .nav-back {
+      font-size: 14px;
+      color: var(--text-secondary);
+      text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: color 0.2s var(--ease);
+    }
+    .nav-back:hover { color: var(--accent-bright); }
+    .nav-back svg { width: 16px; height: 16px; }
+
+    /* CONTENT */
+    .legal-wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: calc(var(--nav-height) + 80px) 40px 100px;
+    }
+
+    .legal-label {
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent-bright);
+      margin-bottom: 16px;
+    }
+
+    .legal-title {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.08;
+      margin-bottom: 14px;
+    }
+
+    .legal-sub {
+      font-size: 15px;
+      color: var(--text-secondary);
+      margin-bottom: 56px;
+    }
+
+    .legal-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 44px 0;
+    }
+
+    .legal-section { margin-bottom: 36px; }
+
+    .legal-section h2 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .legal-section h3 {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 18px 0 8px;
+    }
+
+    .legal-section p,
+    .legal-section address,
+    .legal-section li {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-style: normal;
+    }
+
+    .legal-section ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+    .legal-section ul li { margin-bottom: 4px; }
+
+    .legal-section a {
+      color: var(--accent-bright);
+      text-decoration: none;
+    }
+    .legal-section a:hover { text-decoration: underline; }
+
+    .legal-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px 32px;
+    }
+
+    .chip {
+      display: inline-block;
+      background: rgba(59,130,246,0.12);
+      border: 1px solid rgba(59,130,246,0.28);
+      border-radius: 999px;
+      padding: 3px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent-bright);
+      margin-right: 8px;
+      margin-bottom: 6px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 56px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--accent-bright);
+      text-decoration: none;
+      transition: gap 0.2s var(--ease);
+    }
+    .back-link:hover { gap: 12px; }
+    .back-link svg { width: 16px; height: 16px; }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 40px;
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    footer a { color: var(--accent-bright); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 768px) {
+      .nav-inner  { padding: 0 20px; }
+      .legal-wrap { padding: calc(var(--nav-height) + 48px) 20px 80px; }
+      .legal-card { padding: 20px; }
+      footer      { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-mark">A</div>
+        <span class="nav-logo-text">Axora Netzwerk</span>
+      </a>
+      <a href="index.html" class="nav-back">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        Zurück zur Startseite
+      </a>
+    </div>
+  </nav>
+
+  <main class="legal-wrap">
+    <p class="legal-label">Rechtliches</p>
+    <h1 class="legal-title">Datenschutz&shy;erklärung</h1>
+    <p class="legal-sub">
+      Zuletzt aktualisiert: Mai 2026 &nbsp;·&nbsp;
+      Verantwortlich: Maurice Upmeier
+    </p>
+
+    <!-- 1 -->
+    <div class="legal-section">
+      <h2>1. Verantwortlicher</h2>
+      <div class="legal-card">
+        <address>
+          Maurice Upmeier<br>
+          Voltmannstr. 237<br>
+          33613 Bielefeld<br>
+          Deutschland<br><br>
+          E-Mail: <a href="mailto:ayzetd@icloud.com">ayzetd@icloud.com</a>
+        </address>
+      </div>
+    </div>
+
+    <hr class="legal-divider">
+
+    <!-- 2 -->
+    <div class="legal-section">
+      <h2>2. Allgemeines zur Datenverarbeitung</h2>
+      <p>
+        Diese Website erhebt und verarbeitet personenbezogene Daten grundsätzlich nur, soweit dies zur Bereitstellung
+        einer funktionsfähigen Website sowie der Inhalte und Leistungen erforderlich ist. Die Verarbeitung erfolgt
+        auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem technisch einwandfreien Webauftritt).
+      </p>
+      <p style="margin-top:12px;">
+        Es werden keine Tracking-, Werbe- oder Analyse-Cookies eingesetzt. Es findet kein Profiling statt.
+      </p>
+    </div>
+
+    <!-- 3 -->
+    <div class="legal-section">
+      <h2>3. Hosting – GitHub Pages</h2>
+      <p>
+        Diese Website wird über <strong style="color:var(--text-primary);">GitHub Pages</strong> gehostet, einem Dienst der
+        GitHub, Inc. (88 Colin P Kelly Jr St, San Francisco, CA 94107, USA) – einem Unternehmen von Microsoft Corporation.
+      </p>
+      <p style="margin-top:12px;">
+        Beim Abrufen dieser Website erfasst GitHub automatisch technische Zugriffsdaten in Server-Logs, darunter:
+      </p>
+      <ul style="margin-top:8px;">
+        <li>IP-Adresse des anfragenden Geräts</li>
+        <li>Datum und Uhrzeit der Anfrage</li>
+        <li>Aufgerufene URL</li>
+        <li>Browsertyp und Betriebssystem (User-Agent)</li>
+        <li>HTTP-Statuscode</li>
+      </ul>
+      <p style="margin-top:12px;">
+        Diese Daten werden von GitHub gemäß der eigenen Datenschutzerklärung verarbeitet. Da GitHub-Server sich in den USA
+        befinden, findet eine Datenübertragung in ein Drittland statt. GitHub ist unter dem EU-US Data Privacy Framework
+        zertifiziert (Art. 45 DSGVO). Weitere Informationen:
+        <a href="https://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener noreferrer">GitHub Datenschutzerklärung</a>.
+      </p>
+    </div>
+
+    <!-- 4 -->
+    <div class="legal-section">
+      <h2>4. Google Fonts</h2>
+      <p>
+        Diese Website bindet Schriftarten von <strong style="color:var(--text-primary);">Google Fonts</strong> (Google Ireland Ltd.,
+        Gordon House, Barrow Street, Dublin 4, Irland) über die Google CDN ein. Beim Laden der Seite wird dabei
+        eine Verbindung zu Google-Servern aufgebaut, wodurch die IP-Adresse des Besuchers an Google übertragen werden kann.
+      </p>
+      <p style="margin-top:12px;">
+        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einer einheitlichen Darstellung der Website).
+        Weitere Informationen:
+        <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Datenschutzerklärung</a>.
+      </p>
+    </div>
+
+    <!-- 5 -->
+    <div class="legal-section">
+      <h2>5. Externe Links (Discord)</h2>
+      <p>
+        Die Website enthält Links zum Discord-Dienst (Discord Inc., 444 De Haro Street, Suite 200,
+        San Francisco, CA 94107, USA). Durch Anklicken eines Discord-Links verlässt man diese Website.
+        Ab diesem Zeitpunkt gilt die Datenschutzerklärung von Discord:
+        <a href="https://discord.com/privacy" target="_blank" rel="noopener noreferrer">discord.com/privacy</a>.
+        Eine Datenübertragung an Discord findet erst durch aktives Anklicken des Links statt.
+      </p>
+    </div>
+
+    <!-- 6 -->
+    <div class="legal-section">
+      <h2>6. Betroffenenrechte</h2>
+      <p>Betroffene Personen haben nach der DSGVO folgende Rechte:</p>
+      <ul style="margin-top:10px;">
+        <li><strong style="color:var(--text-primary);">Auskunft</strong> – Art. 15 DSGVO</li>
+        <li><strong style="color:var(--text-primary);">Berichtigung</strong> – Art. 16 DSGVO</li>
+        <li><strong style="color:var(--text-primary);">Löschung</strong> – Art. 17 DSGVO</li>
+        <li><strong style="color:var(--text-primary);">Einschränkung der Verarbeitung</strong> – Art. 18 DSGVO</li>
+        <li><strong style="color:var(--text-primary);">Datenübertragbarkeit</strong> – Art. 20 DSGVO</li>
+        <li><strong style="color:var(--text-primary);">Widerspruch</strong> – Art. 21 DSGVO</li>
+      </ul>
+      <p style="margin-top:14px;">
+        Zur Ausübung dieser Rechte genügt eine formlose E-Mail an:
+        <a href="mailto:ayzetd@icloud.com">ayzetd@icloud.com</a>
+      </p>
+    </div>
+
+    <!-- 7 -->
+    <div class="legal-section">
+      <h2>7. Beschwerderecht bei der Aufsichtsbehörde</h2>
+      <p>
+        Es besteht das Recht, sich bei der zuständigen Datenschutz-Aufsichtsbehörde zu beschweren.
+        Die zuständige Behörde für Nordrhein-Westfalen ist:
+      </p>
+      <div class="legal-card" style="margin-top:16px;">
+        <address>
+          <strong style="color:var(--text-primary);">Landesbeauftragte für Datenschutz und Informationsfreiheit NRW (LDI NRW)</strong><br>
+          Kavalleriestr. 2–4<br>
+          40213 Düsseldorf<br><br>
+          Telefon: +49 211 38424-0<br>
+          E-Mail: <a href="mailto:poststelle@ldi.nrw.de">poststelle@ldi.nrw.de</a><br>
+          Web: <a href="https://www.ldi.nrw.de" target="_blank" rel="noopener noreferrer">www.ldi.nrw.de</a>
+        </address>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="legal-section">
+      <h2>8. Aktualität dieser Erklärung</h2>
+      <p>
+        Diese Datenschutzerklärung ist aktuell gültig. Durch die Weiterentwicklung der Website oder aufgrund
+        geänderter gesetzlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern.
+        Die jeweils aktuelle Version ist jederzeit auf dieser Seite abrufbar.
+      </p>
+    </div>
+
+    <a href="index.html" class="back-link">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Zurück zur Startseite
+    </a>
+  </main>
+
+  <footer>
+    <p>© 2026 Axora Netzwerk &nbsp;·&nbsp; <a href="impressum.html">Impressum</a> &nbsp;·&nbsp; <a href="datenschutz.html">Datenschutz</a></p>
+  </footer>
+
+</body>
+</html>
