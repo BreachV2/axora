@@ -47,14 +47,14 @@
       --container:     1200px;
 
       
-      --glass-bg:        rgba(255,255,255,0.055);
-      --glass-bg-hover:  rgba(255,255,255,0.088);
-      --glass-border:    rgba(255,255,255,0.13);
-      --glass-border-h:  rgba(255,255,255,0.22);
-      --glass-shine:     rgba(255,255,255,0.22);
-      --glass-shadow:    0 12px 40px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.18), inset 0 -1px 0 rgba(255,255,255,0.04);
-      --glass-shadow-h:  0 24px 64px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.26), 0 0 48px rgba(59,130,246,0.18);
-      --glass-blur:      blur(28px) saturate(190%);
+      --glass-bg:        rgba(255,255,255,0.075);
+      --glass-bg-hover:  rgba(255,255,255,0.108);
+      --glass-border:    rgba(255,255,255,0.20);
+      --glass-border-h:  rgba(255,255,255,0.32);
+      --glass-shine:     rgba(255,255,255,0.62);
+      --glass-shadow:    0 24px 56px rgba(0,0,0,0.50), 0 6px 18px rgba(0,0,0,0.30), inset 0 2px 0 rgba(255,255,255,0.58), inset 0 -1px 0 rgba(255,255,255,0.07), inset 1px 0 rgba(255,255,255,0.12), inset -1px 0 rgba(255,255,255,0.06);
+      --glass-shadow-h:  0 36px 80px rgba(0,0,0,0.58), 0 10px 28px rgba(0,0,0,0.34), inset 0 2px 0 rgba(255,255,255,0.66), inset 0 -1px 0 rgba(255,255,255,0.09), 0 0 52px rgba(59,130,246,0.22);
+      --glass-blur:      blur(64px) saturate(220%) brightness(1.06);
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -157,11 +157,11 @@
       height: var(--nav-height);
       display: flex;
       align-items: center;
-      background: rgba(7,9,15,0.42);
-      backdrop-filter: blur(44px) saturate(220%);
-      -webkit-backdrop-filter: blur(44px) saturate(220%);
+      background: rgba(7,9,15,0.34);
+      backdrop-filter: blur(72px) saturate(240%) brightness(1.05);
+      -webkit-backdrop-filter: blur(72px) saturate(240%) brightness(1.05);
       border-bottom: 1px solid var(--glass-border);
-      box-shadow: 0 1px 0 rgba(255,255,255,0.07), 0 8px 32px rgba(0,0,0,0.4);
+      box-shadow: 0 1px 0 rgba(255,255,255,0.20), 0 16px 48px rgba(0,0,0,0.42), inset 0 1px 0 rgba(255,255,255,0.24), inset 0 -1px 0 rgba(0,0,0,0.06);
       transition: background var(--transition);
     }
     nav .container {
@@ -597,9 +597,13 @@
     .discord-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 12%; right: 12%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.48), transparent);
+      top: 0; left: 0; right: 0;
+      height: 50%;
+      background:
+        radial-gradient(ellipse 84% 52% at 50% -8%, rgba(255,255,255,0.26) 0%, rgba(255,255,255,0.07) 42%, transparent 72%),
+        radial-gradient(ellipse 33% 23% at 79% -4%, rgba(255,255,255,0.16) 0%, transparent 65%),
+        radial-gradient(ellipse 17% 27% at 3% 20%, rgba(255,255,255,0.07) 0%, transparent 70%);
+      border-radius: inherit;
       pointer-events: none;
     }
     .dc-header {
@@ -694,9 +698,13 @@
     .feat-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 10%; right: 10%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.52), transparent);
+      top: 0; left: 0; right: 0;
+      height: 54%;
+      background:
+        radial-gradient(ellipse 82% 52% at 50% -8%, rgba(255,255,255,0.28) 0%, rgba(255,255,255,0.08) 42%, transparent 72%),
+        radial-gradient(ellipse 34% 24% at 80% -4%, rgba(255,255,255,0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 18% 28% at 2% 22%, rgba(255,255,255,0.08) 0%, transparent 70%);
+      border-radius: inherit;
       pointer-events: none;
     }
     .feat-card::after {
@@ -794,9 +802,13 @@
     .team-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 10%; right: 10%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.42), transparent);
+      top: 0; left: 0; right: 0;
+      height: 52%;
+      background:
+        radial-gradient(ellipse 88% 50% at 50% -8%, rgba(255,255,255,0.24) 0%, rgba(255,255,255,0.07) 42%, transparent 72%),
+        radial-gradient(ellipse 32% 22% at 78% -4%, rgba(255,255,255,0.16) 0%, transparent 65%),
+        radial-gradient(ellipse 16% 26% at 3% 20%, rgba(255,255,255,0.07) 0%, transparent 70%);
+      border-radius: inherit;
       pointer-events: none;
     }
     .team-card:hover {
@@ -1077,6 +1089,89 @@
       align-items: center;
       gap: 0;
     }
+    /* ===========================
+       LIQUID GLASS — iOS 26 Style
+       =========================== */
+
+    /* Mouse-tracking specular lens — injected via JS */
+    .lg-lens {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle 220px at var(--lx, 50%) var(--ly, 10%), rgba(255,255,255,0.16) 0%, transparent 65%);
+      pointer-events: none;
+      border-radius: inherit;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      z-index: 1;
+    }
+    .feat-card:hover .lg-lens,
+    .team-card:hover .lg-lens,
+    .discord-card:hover .lg-lens { opacity: 1; }
+
+    /* Animated iridescent caustic shimmer */
+    .lg-caustic {
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg,
+        rgba(255,255,255,0.00) 0%,
+        rgba(59,130,246,0.07) 22%,
+        rgba(147,51,234,0.06) 44%,
+        rgba(6,182,212,0.06) 66%,
+        rgba(255,255,255,0.00) 100%
+      );
+      background-size: 300% 300%;
+      animation: lgCaustic 10s ease infinite;
+      pointer-events: none;
+      z-index: 0;
+      mix-blend-mode: screen;
+    }
+    @keyframes lgCaustic {
+      0%   { background-position: 0% 50%; }
+      50%  { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Bottom caustic edge — glass bottom reflection */
+    .feat-card .lg-edge,
+    .team-card .lg-edge {
+      position: absolute;
+      bottom: 0; left: 6%; right: 6%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* Hero badge — Liquid Glass upgrade */
+    .hero-badge {
+      backdrop-filter: blur(64px) saturate(220%) brightness(1.08) !important;
+      -webkit-backdrop-filter: blur(64px) saturate(220%) brightness(1.08) !important;
+      box-shadow:
+        inset 0 2px 0 rgba(255,255,255,0.32),
+        inset 0 -1px 0 rgba(255,255,255,0.08),
+        0 4px 28px rgba(0,0,0,0.40),
+        0 0 0 1px rgba(59,130,246,0.24) !important;
+    }
+
+    /* Nav logo mark — stronger specular */
+    .nav-logo-mark {
+      box-shadow: 0 0 28px var(--accent-glow-strong), inset 0 2px 0 rgba(255,255,255,0.42), inset 0 -1px 0 rgba(0,0,0,0.18) !important;
+    }
+
+    /* FAQ item — Liquid Glass */
+    .faq-item {
+      box-shadow: 0 6px 24px rgba(0,0,0,0.32), inset 0 1.5px 0 rgba(255,255,255,0.22), inset 0 -1px 0 rgba(255,255,255,0.06) !important;
+    }
+    .faq-item.open {
+      box-shadow: 0 10px 36px rgba(0,0,0,0.40), inset 0 1.5px 0 rgba(255,255,255,0.26), inset 0 -1px 0 rgba(255,255,255,0.08), 0 0 24px rgba(59,130,246,0.12) !important;
+    }
+
+    /* DC stat cells — Liquid Glass inner */
+    .dc-stat {
+      box-shadow: inset 0 1.5px 0 rgba(255,255,255,0.22), inset 0 -1px 0 rgba(255,255,255,0.05) !important;
+    }
+
   </style>
 </head>
 <body>
@@ -1133,7 +1228,7 @@
       </h1>
 
       <p class="subhead hero-sub">
-        [Platzhalter – Was macht Axora besonders? Wer seid ihr und warum sollte jemand beitreten?]
+        Ein Server für alle. Komm rein, lern Leute kennen und werde Teil von Axora.
       </p>
 
       <div class="hero-cta">
@@ -1182,7 +1277,7 @@
           <span class="label">Über Axora</span>
           <h2 class="headline">Was ist das<br>Axora Netzwerk?</h2>
           <p class="subhead">
-            [Platzhalter – Beschreibe hier ausführlich, was Axora Netzwerk ist, welche Vision hinter der Community steckt und warum es sich lohnt, Teil davon zu sein.]
+            Ein Server für alle. Komm rein, lern Leute kennen und werde Teil von Axora.
           </p>
           <div class="about-points">
             <div class="about-point">
@@ -1244,38 +1339,38 @@
       <div class="sec-header">
         <span class="label" data-reveal>Was wir bieten</span>
         <h2 class="headline d2" data-reveal>Alles, was eine gute<br>Community braucht</h2>
-        <p class="subhead d3" data-reveal>[Platzhalter – Kurze Einleitung zu den Features und Mehrwerten von Axora.]</p>
+        <p class="subhead d3" data-reveal>Von aktiven Chats bis hin zu Events – bei Axora findest du alles, was eine gute Community ausmacht.</p>
       </div>
       <div class="features-grid">
         <div class="feat-card" data-reveal data-tilt>
           <div class="feat-icon">💬</div>
-          <div class="feat-title">[Feature 1]</div>
-          <p class="feat-desc">[Platzhalter – Beschreibung von Feature 1 und was es für Mitglieder bedeutet.]</p>
+          <div class="feat-title">Aktive Chats</div>
+          <p class="feat-desc">Tausch dich täglich mit anderen Mitgliedern aus – egal ob Smalltalk oder tiefe Gespräche.</p>
         </div>
         <div class="feat-card d2" data-reveal data-tilt>
           <div class="feat-icon">🎮</div>
-          <div class="feat-title">[Feature 2]</div>
-          <p class="feat-desc">[Platzhalter – Beschreibung von Feature 2 und was es für Mitglieder bedeutet.]</p>
+          <div class="feat-title">Gaming & Events</div>
+          <p class="feat-desc">Nimm an regelmäßigen Community-Events teil und spiel mit anderen zusammen.</p>
         </div>
         <div class="feat-card d3" data-reveal data-tilt>
           <div class="feat-icon">🏆</div>
-          <div class="feat-title">[Feature 3]</div>
-          <p class="feat-desc">[Platzhalter – Beschreibung von Feature 3 und was es für Mitglieder bedeutet.]</p>
+          <div class="feat-title">Rangsystem</div>
+          <p class="feat-desc">Sei aktiv und steig im Rang auf – deine Zeit bei Axora wird belohnt.</p>
         </div>
         <div class="feat-card d4" data-reveal data-tilt>
           <div class="feat-icon">🎁</div>
-          <div class="feat-title">[Feature 4]</div>
-          <p class="feat-desc">[Platzhalter – Beschreibung von Feature 4 und was es für Mitglieder bedeutet.]</p>
+          <div class="feat-title">Giveaways</div>
+          <p class="feat-desc">Regelmäßige Giveaways für unsere Community-Mitglieder – einfach dabei sein und gewinnen.</p>
         </div>
         <div class="feat-card d5" data-reveal data-tilt>
           <div class="feat-icon">🛡️</div>
-          <div class="feat-title">[Feature 5]</div>
-          <p class="feat-desc">[Platzhalter – Beschreibung von Feature 5 und was es für Mitglieder bedeutet.]</p>
+          <div class="feat-title">Sicheres Umfeld</div>
+          <p class="feat-desc">Ein freundliches, moderiertes Server – respektvoller Umgang steht bei uns an erster Stelle.</p>
         </div>
         <div class="feat-card d6" data-reveal data-tilt>
           <div class="feat-icon">⚡</div>
-          <div class="feat-title">[Feature 6]</div>
-          <p class="feat-desc">[Platzhalter – Beschreibung von Feature 6 und was es für Mitglieder bedeutet.]</p>
+          <div class="feat-title">Immer aktiv</div>
+          <p class="feat-desc">Axora schläft nie – rund um die Uhr sind Mitglieder online und bereit zum Chatten.</p>
         </div>
       </div>
     </div>
@@ -1716,6 +1811,38 @@
         }
       });
     });
+
+    // ── Liquid Glass — iOS 26 ──
+    // Injects a mouse-tracking specular lens + iridescent caustic layer into each card
+    (function () {
+      function initLiquidGlass(selector) {
+        document.querySelectorAll(selector).forEach(card => {
+          const lens    = document.createElement('div');
+          lens.className = 'lg-lens';
+          const caustic  = document.createElement('div');
+          caustic.className = 'lg-caustic';
+          const edge     = document.createElement('div');
+          edge.className  = 'lg-edge';
+          card.prepend(edge);
+          card.prepend(caustic);
+          card.prepend(lens);
+
+          card.addEventListener('mousemove', e => {
+            const r = card.getBoundingClientRect();
+            card.style.setProperty('--lx', ((e.clientX - r.left) / r.width  * 100).toFixed(1) + '%');
+            card.style.setProperty('--ly', ((e.clientY - r.top)  / r.height * 100).toFixed(1) + '%');
+          });
+          card.addEventListener('mouseleave', () => {
+            card.style.removeProperty('--lx');
+            card.style.removeProperty('--ly');
+          });
+        });
+      }
+
+      initLiquidGlass('.feat-card');
+      initLiquidGlass('.team-card');
+      initLiquidGlass('.discord-card');
+    })();
   </script>
 </body>
 </html>
